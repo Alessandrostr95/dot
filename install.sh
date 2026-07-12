@@ -32,3 +32,26 @@ echo "Installing Fonts from Official Arch Packages..."
 ./install_fonts.sh
 
 echo "Fonts installed successfully."
+
+
+echo "Copying configuration files..." 
+# niri (overwriting existing files)
+cp -r config/niri/* $HOME/.config/niri/
+
+# hyprlock
+cp -r config/hypr/* $HOME/.config/hypr/
+
+# kitty
+cp -r config/kitty/* $HOME/.config/kitty/
+
+# waybar
+cp -r config/waybar/* $HOME/.config/waybar/
+
+# wlogout
+cp -r config/wlogout/* $HOME/.config/wlogout/
+
+# wofi
+cp -r config/wofi/* $HOME/.config/wofi/
+
+# bashrc
+cp config/.bashrc $HOME/.bashrc

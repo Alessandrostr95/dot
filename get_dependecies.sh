@@ -55,6 +55,9 @@ else
     exit 1
 fi
 
+# wofi: application launcher
+install_package wofi
+
 # brightnessctl: brightness control
 install_package brightnessctl
 

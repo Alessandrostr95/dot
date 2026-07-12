@@ -3,7 +3,8 @@
 # Array of fonts
 FONTS=(
     "ttf-jetbrains-mono-nerd"
-    # "ttf-font-awesome" # good for bars like polybar/baybar
+    "ttf-firacode-nerd"
+    "ttf-font-awesome"
 )
 
 sudo pacman -S --noconfirm --needed "${FONTS[@]}"
