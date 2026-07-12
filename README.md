@@ -18,7 +18,7 @@ The following dependencies are required for the scripts to work properly:
 
 Other dependecies are:
 - `brightnessctl`: for controlling screen brightness
-- `wpctl`: for controlling audio volume
+- `pipewire`: for controlling audio
 - `blueman`: a GUI for managing Bluetooth devices
 - `nmtui`: a text-based user interface for managing network connections
 - `neovim`: a text editor
@@ -48,4 +48,5 @@ This project is licensed under the GPL-3.0 License.
 
 ## TODO
 - [ ] solve apple-fonts issue (aur)
+- [ ] add check for pipewire and bluetoothctl
 - [ ] add screenshot and video for a showcase of the configuration

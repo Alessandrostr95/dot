@@ -36,22 +36,22 @@ echo "Fonts installed successfully."
 
 echo "Copying configuration files..." 
 # niri (overwriting existing files)
-cp -r config/niri/* $HOME/.config/niri/
+cp -r config/niri/ $HOME/.config/
 
 # hyprlock
-cp -r config/hypr/* $HOME/.config/hypr/
+cp -r config/hypr/ $HOME/.config/
 
 # kitty
-cp -r config/kitty/* $HOME/.config/kitty/
+cp -r config/kitty/ $HOME/.config/
 
 # waybar
-cp -r config/waybar/* $HOME/.config/waybar/
+cp -r config/waybar/ $HOME/.config/
 
 # wlogout
-cp -r config/wlogout/* $HOME/.config/wlogout/
+cp -r config/wlogout/ $HOME/.config/
 
 # wofi
-cp -r config/wofi/* $HOME/.config/wofi/
+cp -r config/wofi/ $HOME/.config/
 
 # bashrc
 cp config/.bashrc $HOME/.bashrc

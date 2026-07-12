@@ -61,9 +61,6 @@ install_package wofi
 # brightnessctl: brightness control
 install_package brightnessctl
 
-# wpctl: audio control
-install_package wpctl
-
 # other dependencies
 install_package nmtui neovim emacs
 
