@@ -14,6 +14,7 @@ The following dependencies are required for the scripts to work properly:
 - `kitty`: for the terminal
 - `wlogout`: for the logout screen
 - `swaync`: for notifications
+- `wofi`: for launching applications
 
 Other dependecies are:
 - `brightnessctl`: for controlling screen brightness
@@ -22,6 +23,11 @@ Other dependecies are:
 - `nmtui`: a text-based user interface for managing network connections
 - `neovim`: a text editor
 - `emacs`: a text editor (and more)
+
+Some fonts that will be installed are:
+- `ttf-jetbrains-mono-nerd`: JetBrains Mono Nerd Font
+- `ttf-firacode-nerd`: Fira Code Nerd Font
+- `ttf-font-awesome`: Font Awesome
 
 ## Installation
 To install the dependencies and fonts, run the following commands in your terminal:
@@ -35,7 +41,11 @@ chmod +x *.sh
 After running the installation script, you HAVE TO LOG OUT and log back in for the changes to take effect.
 
 ## License
-This project is licensed under the GPL-3.0 License. 
+This project is licensed under the GPL-3.0 License.
+
+## Acknowledgements
+- [Alessandrostr95](https://github.com/Alessandrostr95) (*myself*) for creating and maintaining this repository.
 
 ## TODO
 - [ ] solve apple-fonts issue (aur)
+- [ ] add screenshot and video for a showcase of the configuration
