@@ -51,3 +51,5 @@ This project is licensed under the GPL-3.0 License.
 - [ ] add check for pipewire and bluetoothctl
 - [ ] add screenshot and video for a showcase of the configuration
 - [ ] solve nmtui issue (aur)
+- [ ] implement file manager setup
+- [ ] implement editor setup (neovim and emacs)
