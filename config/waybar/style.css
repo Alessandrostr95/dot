@@ -1,0 +1,489 @@
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family:
+    "FiraCode Nerd Font", "JetBrainsMono Nerd Font", FontAwesome, Roboto,
+    Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  border: none;
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+window#waybar {
+  /* background-color: rgba(43, 48, 59, 0.5); */
+  /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+  border-bottom: 0px solid #ffffff;
+  /* color: #ffffff; */
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+}
+
+window#waybar.chromium {
+  border: none;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+tooltip {
+  background-color: #24283b;
+  /* <-- QUESTA È LA RIGA CHIAVE. */
+  /* Sostituisci con il tuo colore di sfondo opaco. */
+  border-radius: 8px;
+  /* Angoli arrotondati (estetica) */
+  padding: 8px 12px;
+  /* Spaziatura interna */
+  border: 1px solid #4c566a;
+  /* Un bordo, se ti piace (opzionale) */
+}
+
+tooltip label {
+  color: #c0caf5;
+  /* Colore del testo (es. bianco/grigio chiaro) */
+  font-size: 14px;
+}
+
+#image {
+  margin: 0 10px;
+}
+
+/* you can set a style on hover for any module like this */
+/* #pulseaudio:hover {
+    background-color: #a37800;
+} */
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+
+/*
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    cursor: auto;
+}
+
+#workspaces button.focused {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}*/
+
+/*
+set color variables
+*/
+/* @define-color workspacesbackground1 #2c3e50;
+@define-color workspacesbackground2 #34495e;
+@define-color textcolor1 #ecf0f1; */
+
+/*
+@define-color workspacesbackground1 #2c3e50;
+@define-color workspacesbackground2 #7c98b5;
+@define-color textcolor1 transparent;
+@define-color textcolor2 #ecf0f1;
+*/
+
+/*
+#workspaces {
+  background: @workspacesbackground1;
+  padding: 2px 1px;
+  margin: 3px 5px;
+  border-radius: 15px;
+  border: 2px solid @workspacesbackground2;
+  font-weight: bold;
+  font-style: normal;
+  opacity: 0.8;
+  font-size: 16px;
+  color: @textcolor1;
+}
+*/
+
+#workspaces {
+  padding: 1px 3px;
+  margin: 3px 5px;
+  border-radius: 20px;
+  border: 2px solid whitesmoke;
+  font-weight: bold;
+  font-style: normal;
+  /* opacity: 0.8; */
+  font-size: 16px;
+}
+
+/*
+#workspaces button {
+  padding: 0px 5px;
+  margin: 4px 3px;
+  border-radius: 15px;
+  border: 0px;
+  color: @workspacesbackground1;
+  background-color: @workspacesbackground2;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.4;
+}
+*/
+
+#workspaces button {
+  padding: 0px 5px;
+  margin: 4px 3px;
+  border-radius: 15px;
+  border: 0px;
+  color: whitesmoke;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+
+/*
+#workspaces button.active {
+  color: @workspacesbackground1;
+  background: @workspacesbackground2;
+  border-radius: 15px;
+  min-width: 40px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+*/
+
+#workspaces button.active {
+  color: whitesmoke;
+  background: transparent;
+  border-radius: 15px;
+  border: 2px solid whitesmoke;
+  min-width: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+/*
+#workspaces button:hover {
+  color: @textcolor1;
+  background: @workspacesbackground2;
+  border-radius: 15px;
+  opacity: 0.7;
+}
+ */
+
+#workspaces button:hover {
+  color: black;
+  background: whitesmoke;
+}
+
+#mode {
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+  padding: 0 10px;
+  color: #ffffff;
+
+  /* background-color: white;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    color: #000000;
+    margin: 5px 3px;
+    padding-right: 13px; */
+}
+
+#window {
+  margin: 0 4px;
+}
+
+/* If workspaces is the left@workspacesbackground1most module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#clock {
+}
+
+#battery {
+}
+
+#battery.charging,
+#battery.plugged {
+  /* color: #26A65B; */
+  background-color: #26a65b;
+  border-radius: 20px;
+  margin: 5px 0px;
+  padding-right: 15px;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+  color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  padding-right: 15px;
+}
+
+#battery.warning {
+  /* color: #f39c12; */
+
+  background-color: #f39c12;
+  border-radius: 20px;
+  margin: 5px 0px;
+  padding-right: 15px;
+}
+
+#power-profiles-daemon {
+  padding-right: 15px;
+}
+
+#power-profiles-daemon.performance {
+  background-color: #f53c3c;
+  color: #ffffff;
+}
+
+#power-profiles-daemon.balanced {
+  background-color: #2980b9;
+  color: #ffffff;
+}
+
+#power-profiles-daemon.power-saver {
+  background-color: #2ecc71;
+  color: #000000;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#cpu {
+}
+
+#memory {
+}
+
+#disk {
+}
+
+#backlight {
+}
+
+#network {
+}
+
+#network.disconnected {
+  color: #f53c3c;
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+  /* light gray */
+  color: #b2b2b2;
+}
+
+#wireplumber {
+  background-color: #fff0f5;
+  color: #000000;
+}
+
+#wireplumber.muted {
+  background-color: #f53c3c;
+}
+
+#custom-media {
+  background-color: #66cc99;
+  color: #2a5c45;
+  min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+  background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+  background-color: #ffa000;
+}
+
+#temperature {
+}
+
+#temperature.critical {
+  color: #eb4d4b;
+}
+
+#tray {
+  /* background-color: #2980b9; */
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+#idle_inhibitor {
+  background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+  background-color: #ecf0f1;
+  color: #2d3436;
+}
+
+#mpd {
+  background-color: #66cc99;
+  color: #2a5c45;
+}
+
+#mpd.disconnected {
+  background-color: #f53c3c;
+}
+
+#mpd.stopped {
+  background-color: #90b1b1;
+}
+
+#mpd.paused {
+  background-color: #51a37a;
+}
+
+#language {
+  background: #00b093;
+  color: #740864;
+  padding: 0 5px;
+  margin: 0 5px;
+  min-width: 16px;
+}
+
+#keyboard-state {
+  background: #97e1ad;
+  color: #000000;
+  padding: 0 0px;
+  margin: 0 5px;
+  min-width: 16px;
+}
+
+#keyboard-state > label {
+  padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+  background-color: transparent;
+}
+
+#privacy {
+  padding: 0;
+}
+
+#privacy-item {
+  padding: 0 5px;
+  color: white;
+}
+
+#privacy-item.screenshare {
+  background-color: #cf5700;
+}
+
+#privacy-item.audio-in {
+  background-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+  background-color: #0069d4;
+}
+
+#custom-power {
+  /* background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0 10px; */
+
+  padding-left: 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  color: #000000;
+  margin: 5px 3px;
+  padding-right: 13px;
+}
+
+/* Puoi anche definire uno stile per quando ci passi sopra con il mouse */
+#custom-power:hover {
+  background-color: #26a65b;
+  color: #ffffff;
+
+  /*inner shadow*/
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+
+  /* outer shadow */
+  /* box-shadow: 0 0 10px rgba(38, 166, 91, 0.7); */
+}
