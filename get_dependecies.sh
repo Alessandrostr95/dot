@@ -28,7 +28,7 @@ install_package() {
 
 # dependencies:
 # niri: desktop environment
-install_package niri xwayland-satellite xdg-desktop-portal-gnome xdg-desktop-portal-gtk dms-shell-niri matugen qt6-multimedia-ffmpeg
+install_package niri xwayland-satellite xdg-desktop-portal-gnome xdg-desktop-portal-gtk qt6-multimedia-ffmpeg
 systemctl --user add-wants niri.service dms
 
 # swaybg: background image

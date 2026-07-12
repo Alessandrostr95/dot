@@ -50,3 +50,4 @@ This project is licensed under the GPL-3.0 License.
 - [ ] solve apple-fonts issue (aur)
 - [ ] add check for pipewire and bluetoothctl
 - [ ] add screenshot and video for a showcase of the configuration
+- [ ] solve nmtui issue (aur)
