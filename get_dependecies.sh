@@ -58,10 +58,13 @@ fi
 # wofi: application launcher
 install_package wofi
 
-# brightnessctl: brightness control
+# brightnessctl: brightness control (useful for waybar)
 install_package brightnessctl
 
+# power-profile-demon: power management (useful for waybar)
+install_package power-profiles-daemon
+
 # other dependencies
-install_package nmtui neovim emacs
+install_package neovim emacs
 
 install_package blueman

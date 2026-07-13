@@ -17,8 +17,9 @@ The following dependencies are required for the scripts to work properly:
 - `wofi`: for launching applications
 
 Other dependecies are:
-- `brightnessctl`: for controlling screen brightness
-- `pipewire`: for controlling audio
+- `brightnessctl`: for controlling screen brightness (useful for waybar)
+- `pipewire`: for controlling audio (useful for waybar)
+- `power-profiles-daemon`: for managing power profiles (useful for waybar)
 - `blueman`: a GUI for managing Bluetooth devices
 - `nmtui`: a text-based user interface for managing network connections
 - `neovim`: a text editor
@@ -50,6 +51,6 @@ This project is licensed under the GPL-3.0 License.
 - [ ] solve apple-fonts issue (aur)
 - [ ] add check for pipewire and bluetoothctl
 - [ ] add screenshot and video for a showcase of the configuration
-- [ ] solve nmtui issue (aur)
+- [x] solve nmtui issue (aur)
 - [ ] implement file manager setup
 - [ ] implement editor setup (neovim and emacs)
