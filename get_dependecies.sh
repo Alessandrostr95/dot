@@ -61,7 +61,7 @@ install_package wofi
 # brightnessctl: brightness control (useful for waybar)
 install_package brightnessctl
 
-# power-profile-demon: power management (useful for waybar)
+# power-profiles-daemon: power management (useful for waybar)
 install_package power-profiles-daemon
 
 # other dependencies

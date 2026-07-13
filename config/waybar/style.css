@@ -291,8 +291,16 @@ set color variables
 }
 
 #power-profiles-daemon {
+  border-radius: 20px;
+  margin: 5px 0px;
   padding-right: 15px;
 }
+
+/*
+#power-profiles-daemon {
+  padding-right: 15px;
+}
+*/
 
 #power-profiles-daemon.performance {
   background-color: #f53c3c;
@@ -306,7 +314,7 @@ set color variables
 
 #power-profiles-daemon.power-saver {
   background-color: #2ecc71;
-  color: #000000;
+  color: #ffffff;
 }
 
 label:focus {
