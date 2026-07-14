@@ -68,3 +68,5 @@ install_package power-profiles-daemon
 install_package neovim emacs
 
 install_package blueman
+
+install_package ipe

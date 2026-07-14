@@ -24,6 +24,7 @@ Other dependecies are:
 - `nmtui`: a text-based user interface for managing network connections
 - `neovim`: a text editor
 - `emacs`: a text editor (and more)
+- `ipe`: extensible drawing editor
 
 Some fonts that will be installed are:
 - `ttf-jetbrains-mono-nerd`: JetBrains Mono Nerd Font
