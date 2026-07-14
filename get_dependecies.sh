@@ -11,17 +11,30 @@ is_package_installed() {
 }
 
 # define a function to install a package and check for success
+# if the flac --yay is present, it will be installed from AUR using yay, otherwise it will be installed from the official repositories using pacman
 install_package() {
     # local package="$1"
     # if sudo pacman -S "$package" --noconfirm; then
     # if sudo pacman -Syu $(echo "$package" | tr ' ' '\n'); then
     
-    local packages="$*"
-    if sudo pacman -S $packages --noconfirm; then
-        echo -e "\033[0;32m[✓]\033[0m\t $packages installed successfully."
+    # check if --yay flag is present in the arguments
+    if [[ " $* " == *" --yay "* ]]; then
+        # remove the --yay flag from the arguments
+        local packages=$(echo "$*" | sed 's/--yay//g')
+        if yay -S $packages --noconfirm; then
+            echo -e "\033[0;32m[✓]\033[0m\t $packages installed successfully."
+        else
+            echo -e "\033[0;31m[✗]\033[0m\t Failed to install $packages."
+            exit 1
+        fi
     else
-        echo -e "\033[0;31m[✗]\033[0m\t Failed to install $packages."
-        exit 1
+        local packages="$*"
+        if sudo pacman -S $packages --noconfirm; then
+            echo -e "\033[0;32m[✓]\033[0m\t $packages installed successfully."
+        else
+            echo -e "\033[0;31m[✗]\033[0m\t Failed to install $packages."
+            exit 1
+        fi
     fi
 }
 
@@ -47,13 +60,7 @@ install_package swaync
 install_package hyprlock
 
 # wlogout: logout utility
-if yay -S wlogout
-then
-    echo -e "\033[0;32m[✓]\033[0m\t wlogout installed successfully."
-else
-    echo -e "\033[0;31m[✗]\033[0m\t Failed to install wlogout."
-    exit 1
-fi
+install_package wlogout --yay
 
 # wofi: application launcher
 install_package wofi
